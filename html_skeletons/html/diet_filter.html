@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/filter.css">
+    <title>Diet Filter</title>
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+
+    <script>
+        $(document).ready(startstuff);
+        function startstuff(){
+            $("button").click(passinfo);
+
+        }
+        function passinfo(){
+            let buttontext = $(this).find('b').text();
+            $.ajax({
+                url: '../testfilters.php',
+                data: {
+                    diet: buttontext,
+                    
+                }
+            })
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Select Diet Type</h1>
+        </div>
+        <div class="button-container">
+            <button>
+                <b>Classic</b>
+                <p>No Restrictions</p>
+            </button>
+            <button>
+                <b>Low Carb</b>
+                <p>Coachella Bod Meal Plan</p>
+            </button>
+
+            <button>
+                <b>Vegetarian</b>
+                <p>Rabbit Food</p>
+            </button>
+            <button>
+                <b>Paleo</b>
+                <p>Live Like Your Ancestors</p>
+            </button>
+
+            <button>
+                <b>Carnivore</b>
+                <p>Meat Is Life</p>
+            </button>
+            <button>
+                <b>Pescatarian</b>
+                <p>Vegetarian + Seafood</p>
+            </button>
+        </div>
+        <div class="next-container">
+            <a href="allergy_filter.html"><button class="next">Next</button></a>
+        </div>
+</body>
+</html>

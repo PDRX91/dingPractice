@@ -1,0 +1,6 @@
+{
+    "require": {
+        "mashape/unirest-php": "^3.0",
+        "rapidapi/rapidapi-connect": "^0.0.2"
+    }
+}

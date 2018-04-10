@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 95vh;
+    width: 100vw;
+}
+
+.header {
+    margin-top: 8%;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.button-container, .allergy-button-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.button-container button {
+    margin: 3% 4%;
+}
+
+.allergy-button-container button {
+    margin: 2% 4%;
+}
+
+button:first-of-type {
+    margin-top: 10%;
+}
+
+.next-container {
+    display: flex;
+    justify-content: flex-end;
+    margin: 10% 15% 0 0;
+}
+
