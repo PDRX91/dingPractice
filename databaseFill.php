@@ -1,5 +1,5 @@
 <?php
-$recipeIDQuery="SELECT recipe_id FROM `recipe-allergy` LIMIT 25 OFFSET 375";
+$recipeIDQuery="SELECT recipe_id FROM `recipe-allergy` LIMIT 100 OFFSET 389";
 $recipeResults=mysqli_query($localCon,$recipeIDQuery);
 $recipeIDArray=[];
 while($row = mysqli_fetch_assoc($recipeResults)){
