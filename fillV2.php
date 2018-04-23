@@ -87,7 +87,7 @@ function fillDatabase($id){
     $step=[]; //the actual instruction
     for($x=0; $x<$stepsLength; $x++){
     $stepNumbers[] = $unparsedSteps[$x]['number'];
-    $step[] = $unparsedSteps[$x]['step'];
+    $step[] = addslashes($unparsedSteps[$x]['step']);
     }
     print_r($step);
     $instructionsQuery = "INSERT INTO `instructions` (recipe_id, step_num, step) VALUES ";
